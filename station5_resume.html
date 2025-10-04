@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petar Vučetin - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #fff;
+        }
+        
+        header {
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info {
+            color: #555;
+            font-size: 0.95em;
+        }
+        
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        h2 {
+            font-size: 1.4em;
+            color: #2c3e50;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #ecf0f1;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .summary {
+            font-size: 1.05em;
+            line-height: 1.7;
+            color: #444;
+            margin-bottom: 20px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .skill-category h3 {
+            font-size: 1em;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .skill-category p {
+            font-size: 0.9em;
+            color: #555;
+            line-height: 1.5;
+        }
+        
+        .job {
+            margin-bottom: 25px;
+            page-break-inside: avoid;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .job-title {
+            font-size: 1.15em;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .company {
+            color: #3498db;
+            font-weight: 600;
+        }
+        
+        .date {
+            color: #777;
+            font-size: 0.9em;
+            font-style: italic;
+        }
+        
+        .job-description {
+            margin: 10px 0;
+            color: #444;
+            line-height: 1.6;
+        }
+        
+        .tech-stack {
+            margin-top: 8px;
+            padding: 8px 12px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            font-size: 0.85em;
+            color: #555;
+        }
+        
+        .tech-label {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .industries {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .industry-tag {
+            background: #e8f4f8;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            color: #2c3e50;
+            border: 1px solid #d0e8f1;
+        }
+        
+        @media print {
+            body {
+                padding: 20px;
+                font-size: 11pt;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            h2 {
+                margin-top: 20px;
+                font-size: 1.2em;
+            }
+            
+            .job {
+                margin-bottom: 15px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .job-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Petar Vučetin</h1>
+        <div class="contact-info">
+            <a href="mailto:petar@station5solutions.com">petar@station5solutions.com</a> • 
+            <a href="http://www.linkedin.com/in/petarvucetin">linkedin.com/in/petarvucetin</a> • 
+            Los Angeles, CA • (415) 987-7634
+        </div>
+    </header>
+
+    <section>
+        <h2>Summary</h2>
+        <p class="summary">
+            Enterprise architect and technical leader with 30+ years of experience designing and implementing 
+            scalable, cloud-native solutions. Specializes in Azure-based data platforms, distributed systems, 
+            and ETL architectures. Proven track record leading engineering teams to deliver high-impact solutions 
+            across fintech, energy, retail, and healthcare sectors.
+        </p>
+    </section>
+
+    <section>
+        <h2>Core Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Cloud & Data Platforms</h3>
+                <p>Azure (SQL, Data Factory, Functions, Databricks), Lakehouse architecture, Unity Catalog, Power BI</p>
+            </div>
+            <div class="skill-category">
+                <h3>Development</h3>
+                <p>C#, F#, Python, Scala, WCF, .NET, SOA architecture, REST APIs</p>
+            </div>
+            <div class="skill-category">
+                <h3>Data Engineering</h3>
+                <p>ETL/ELT pipelines, data warehousing, business intelligence, real-time data ingestion</p>
+            </div>
+            <div class="skill-category">
+                <h3>Leadership</h3>
+                <p>Solution architecture, team leadership, Agile/SDLC management, technical strategy</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Professional Experience</h2>
+
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <span class="job-title">Lead Engineer & Architect</span> • 
+                    <span class="company">Chevron</span>
+                </div>
+                <span class="date">May 2018 – Present</span>
+            </div>
+            <p class="job-description">
+                Architected and implemented enterprise Lakehouse platform supporting multi-petabyte data operations. 
+                Designed Python-based extensible framework for rapid data ingestion using JSON specifications, 
+                enabling configuration-driven workflows targeting Databricks Unity Catalog and Microsoft Fabric. 
+                Solution scaled to support global operations across Chevron's data ecosystem.
+            </p>
+            <div class="tech-stack">
+                <span class="tech-label">Tech Stack:</span> Databricks, Python, Scala, Azure Data Factory, Azure Functions, 
+                Azure SQL, Power BI, Ansible
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <span class="job-title">Technical Manager & Solution Architect</span> • 
+                    <span class="company">Gap Inc</span>
+                </div>
+                <span class="date">July 2017 – May 2018</span>
+            </div>
+            <p class="job-description">
+                Led team of 4 engineers designing Azure-based decision support platform serving 2,000+ users across 
+                global retail operations. Implemented large-scale data ingestion from on-premises to Azure SQL DB, 
+                orchestrated using Durable Functions and Data Factory. Created Power BI dashboards for operational 
+                telemetry and data governance. Designed REST API infrastructure with Azure API Management and Traffic Manager.
+            </p>
+            <div class="tech-stack">
+                <span class="tech-label">Tech Stack:</span> Azure SQL, Azure Data Factory, Azure Functions, Azure Data Warehouse, 
+                Power BI, Talend, Denodo, C#, F#
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <span class="job-title">Solution Architect & Team Lead</span> • 
+                    <span class="company">SMART Local 104</span>
+                </div>
+                <span class="date">Aug 2015 – Feb 2017</span>
+            </div>
+            <p class="job-description">
+                Designed membership management and workflow system for 25,000-member union. Architected solution 
+                using Microsoft Dynamics CRM with custom C# extensions, Azure Service Bus, and Azure Functions. 
+                Implemented F# ETL pipeline for legacy data migration to new platform.
+            </p>
+            <div class="tech-stack">
+                <span class="tech-label">Tech Stack:</span> Dynamics CRM, C#, F#, Azure Service Bus, Azure Functions
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <span class="job-title">Solution Architect & Team Lead</span> • 
+                    <span class="company">AXA Rosenberg</span>
+                </div>
+                <span class="date">Aug 2013 – Feb 2014</span>
+            </div>
+            <p class="job-description">
+                Architected SOA solution for financial optimization algorithms using IDesign methodology. 
+                Established sustainable engineering practices and development standards for financial modeling platform.
+            </p>
+            <div class="tech-stack">
+                <span class="tech-label">Tech Stack:</span> C#, WCF, MSSQL, RavenDB
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <span class="job-title">Solution Architect & Team Lead</span> • 
+                    <span class="company">Gap Inc / Piperlime</span>
+                </div>
+                <span class="date">Dec 2010 – Feb 2013</span>
+            </div>
+            <p class="job-description">
+                Architected retail forecasting, inventory management, and merchandising planning systems. 
+                Delivered solutions that reduced operational costs and improved resource utilization through 
+                data warehouse ETL frameworks and business intelligence platforms.
+            </p>
+            <div class="tech-stack">
+                <span class="tech-label">Tech Stack:</span> WPF, WCF, SQL Server 2008 R2, SSIS, Analysis Services, 
+                Data Warehouse ETL
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <span class="job-title">Development Manager & Solution Architect</span> • 
+                    <span class="company">Vertigo Software</span>
+                </div>
+                <span class="date">Sep 2007 – Dec 2010</span>
+            </div>
+            <p class="job-description">
+                Led development teams for enterprise clients including Microsoft, AT&T, Shazam, and WSJ. 
+                Delivered trading clearance systems, WPF/Silverlight applications, and keynote demo for PDC 2008. 
+                Presented at Bay .NET User Group, South Bay Code Camp, SDWest, and TechEd conferences.
+            </p>
+            <div class="tech-stack">
+                <span class="tech-label">Tech Stack:</span> C#, WPF, Silverlight, MSSQL, Script#
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <span class="job-title">Development Manager & Chief Architect</span> • 
+                    <span class="company">EBSCO Industries</span>
+                </div>
+                <span class="date">July 2003 – Sep 2007</span>
+            </div>
+            <p class="job-description">
+                Supervised 12 developers and 5 architects delivering electronic journal management systems. 
+                Participated in NISO standards body for digital usage reporting standards. Led development of 
+                internal tools and collaboration platforms.
+            </p>
+            <div class="tech-stack">
+                <span class="tech-label">Tech Stack:</span> C#, WCF, Windows Workflow Foundation
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+        <h2>Industry Experience</h2>
+        <div class="industries">
+            <span class="industry-tag">Energy & Oil Trading</span>
+            <span class="industry-tag">Fintech & Financial Services</span>
+            <span class="industry-tag">Retail & E-commerce</span>
+            <span class="industry-tag">Healthcare & Insurance</span>
+            <span class="industry-tag">Legal Management</span>
+            <span class="industry-tag">Manufacturing</span>
+            <span class="industry-tag">Publishing</span>
+        </div>
+    </section>
+
+</body>
+</html>
